@@ -1,0 +1,247 @@
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #343a40;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-image: url('img/Alpha_logo.png');
+    background-size: contain;
+    background-position: left center;
+    padding-left: 50px; 
+}
+
+.navbar-brand:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav-item {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none !important; 
+}
+
+.nav-link:hover {
+    color: #f8f9fa;
+}
+
+/* Featured Products Section */
+.featured-products {
+    text-align: center;
+    margin: 40px 0; /* Adjust as needed */
+}
+
+.product {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent products from wrapping */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.5s ease; /* Smooth transitions for scale and translate */
+    justify-content: center; /* Center the product grid */
+}
+
+.product-item {
+    flex: 0 0 250px; /* Fixed width for each product */
+    margin: 0 10px; /* Adjust margins as needed */
+    padding: 20px;
+    border: 1px solid #ccc;
+    transition: transform 0.5s ease; /* Smooth transition */
+    text-align: center; /* Center text within product items */
+}
+
+/* Additional styles for highlighted product */
+.product-item.active {
+    /* Styles for active product (enlarged and lifted) */
+    transform: translateY(-30px) scale(1.1); /* Move up and enlarge */
+}
+
+/* Buy Now Button Styles */
+.buy-button {
+    display: inline-block;
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.buy-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Login Popup Styles */
+.login-popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 34%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001; 
+}
+
+.login-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: #fff;
+    padding: 45px;
+    border-radius: 28px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 435px;
+    width: 86%;
+    animation: fadeInDown 0.5s ease-out; 
+    transition: transform 0.5s ease-out; 
+}
+
+/* Show the popup by changing the transform */
+.login-popup.show {
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Signup Popup Styles */
+.signup-popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 46%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1001; 
+}
+
+.signup-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: #fff;
+    padding: 45px;
+    border-radius: 28px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 435px;
+    width: 86%;
+    animation: fadeInDown 0.5s ease-out; 
+    transition: transform 0.5s ease-out; 
+}
+
+/* Show the popup by changing the transform */
+.signup-popup.show {
+    transform: translate(-50%, -50%);
+}
+
+/* Animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

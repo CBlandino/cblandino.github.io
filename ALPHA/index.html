@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ALPHA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/popup.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+</head>
+<body>
+
+    <body>
+        <header>
+            <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">ALPHA</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between align-items-center">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="aboutus.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="product.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="contactus.html">Contact</a>
+                            </li>
+                            <li class="nav-item" style="margin-left: auto;">
+                                <a class="nav-link text-dark" onclick="showLoginPopup()">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to ALPHA</h1>
+                <a href="product.html" class="cta-button">Shop Now</a>
+            </div>
+        </section>
+    
+<section class="featured-products">
+    <div class="container">
+        <h2>Featured Products</h2>
+        <div class="carousel">
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Product 1</h3>
+                    <p>Description of product 1.</p>
+                    <a href="product.html" class="buy-button">Buy Now</a>
+                </div>
+                <div class="product-item">
+                    <h3>Product 2</h3>
+                    <p>Description of product 2.</p>
+                    <a href="product.html" class="buy-button">Buy Now</a>
+                </div>
+                <div class="product-item">
+                    <h3>Product 3</h3>
+                    <p>Description of product 3.</p>
+                    <a href="product.html" class="buy-button">Buy Now</a>
+                </div>
+                <div class="product-item">
+                    <h3>Product 4</h3>
+                    <p>Description of product 4.</p>
+                    <a href="product.html" class="buy-button">Buy Now</a>
+                </div>
+                <div class="product-item">
+                    <h3>Product 5</h3>
+                    <p>Description of product 5.</p>
+                    <a href="product.html" class="buy-button">Buy Now</a>
+                </div>
+                <div class="product-item">
+                    <h3>Product 6</h3>
+                    <p>Description of product 6.</p>
+                    <a href="product.html" class="buy-button">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>      
+    
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 ALPHA. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <div class="login-popup">
+            <div class="login-popup-content">
+                <span class="close" onclick="showLoginPopup()">&times;</span>
+                <!-- Login Form Here -->
+                <form>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    
+    </body>
+    </html>
