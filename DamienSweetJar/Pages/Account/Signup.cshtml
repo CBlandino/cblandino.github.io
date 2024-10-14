@@ -1,0 +1,51 @@
+﻿@page
+@model SignupModel
+@{
+    ViewData["Title"] = "Signup";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">@ViewData["Title"]</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        
+                        <div class="form-group">
+                            <label asp-for="InputModel.Email"></label>
+                            <input asp-for="InputModel.Email" type="email" class="form-control" />
+                            <span asp-validation-for="InputModel.Email" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label asp-for="InputModel.Username"></label>
+                            <input asp-for="InputModel.Username" class="form-control"/>
+                            <span asp-validation-for="InputModel.Username" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="InputModel.Password"></label>
+                            <input asp-for="InputModel.Password" type="password" class="form-control" />
+                            <span asp-validation-for="InputModel.Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="InputModel.ConfirmPassword">Retype Password</label>
+                            <input asp-for="InputModel.ConfirmPassword" type="password" class="form-control" />
+                            <span asp-validation-for="InputModel.ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-success btn-block">Sign up</button>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <p>Already have an account? <a asp-page="/Account/Login">Log in here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
