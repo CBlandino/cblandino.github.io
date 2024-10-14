@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Light Ivory background */
+    background-color: #F7F7F7; 
+    /* Dark Charcoal for body text */
+    color: #333333; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    /* Deep Navy for headings */
+    color: #002D5C; 
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    /* Light Grayish Blue for links */
+    color: #A4C8E1; 
+    transition: color 0.3s;
+}
+
+a:hover {
+    /* Teal on hover */
+    color: #008C74; 
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary {
+    /* Teal for primary buttons */
+    background-color: #008C74; 
+    /* White text */
+    color: #fff;
+}
+
+.btn-secondary {
+    /* Deep Navy for secondary buttons */
+    background-color: #002D5C; 
+    color: #fff;
+}
+
+.btn-tertiary {
+    /* Teal for tertiary buttons */
+    background-color: #008C74; 
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    /* Dark Charcoal for hover state */
+    background-color: #333333; 
+}
+
+/* Header */
+header {
+    /* Deep Navy to Light Grayish Blue gradient */
+    background: linear-gradient(135deg, #002D5C, #A4C8E1); 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* White for header text */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 4em;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+header .btn {
+    margin-top: 20px;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    /* Gap between cards */
+    gap: 30px;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    text-align: center;
+    /*Padding for more space inside the card */
+    padding: 25px; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Margin to space from buttons */
+    margin-bottom: 30px; 
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 10px;
+    /* Ensure images maintain aspect ratio */
+    height: auto; 
+}
+
+.project h3 {
+    /* Deep Navy for project titles */
+    color: #002D5C; 
+    /* Add margin to separate title from image */
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.project:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills */
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    /* Deep Navy for skill tags */
+    background-color: #002D5C; 
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    /* Charcoal Black for footer */
+    background-color: #1C1C1C; 
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Section Backgrounds */
+#about, #skills, #testimonials, #contact {
+    padding: 50px 0;
+}
+
+#about {
+    /* Light Ivory for the about section */
+    background-color: #F7F7F7; 
+}
+
+#projects {
+    /* White for project section */
+    background-color: #fff; 
+}
+
+#skills {
+    /* Light Ivory for the skills section */
+    background-color: #F7F7F7; 
+}
+
+#testimonials {
+    /* White for testimonials section */
+    background-color: #fff; 
+}
+
+#contact {
+    /* Light Ivory for the contact section */
+    background-color: #F7F7F7;
+}
+
+/* Section Divider */
+section::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 1px;
+    /* Light gray divider line */
+    background-color: #ddd; 
+    margin: 40px auto 0;
+}
+
+/* Increase padding for smoother scrolling */
+section {
+    padding: 80px 0;
+}
+
+/* Particle Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

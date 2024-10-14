@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Christopher Blandino showcasing web development and Java projects.">
+    <meta name="keywords" content="portfolio, web development, Java, GitHub">
+    <title>Christopher Blandino Portfolio</title>
+
+    <!-- AOS for scroll animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Particles.js for background animations -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header with Parallax -->
+    <header class="rellax" data-rellax-speed="-2">
+        <div class="container">
+            <h1>Christopher Blandino</h1>
+            <p>Senior in College | Web Developer & Java Programmer</p>
+            <a href="#projects" class="btn btn-primary">Explore My Work</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" data-aos="fade-up">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi! I'm Christopher Blandino, a passionate web developer and Java programmer with a focus on creating dynamic, responsive websites and robust Java applications.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" data-aos="fade-up">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <!-- Website Project 1 -->
+                <div class="project" data-aos="zoom-in">
+                    <img src="images/website1-screenshot.jpg" alt="Website 1 Screenshot">
+                    <h3>Website Project 1: [Project Title]</h3>
+                    <p>A brief description of Website Project 1.</p>
+                    <a href="https://cblandino.github.io/website1/" class="btn btn-secondary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/cblandino/website1" class="btn btn-tertiary" target="_blank">View on GitHub</a>
+                </div>
+
+                <!-- Website Project 2 -->
+                <div class="project" data-aos="zoom-in">
+                    <img src="images/website2-screenshot.jpg" alt="Website 2 Screenshot">
+                    <h3>Website Project 2: [Project Title]</h3>
+                    <p>A brief description of Website Project 2.</p>
+                    <a href="https://cblandino.github.io/website2/" class="btn btn-secondary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/cblandino/website2" class="btn btn-tertiary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" data-aos="fade-up">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>Java, Spring Boot, Hibernate</li>
+                <li>Responsive Web Design (Bootstrap, Tailwind)</li>
+                <li>Version Control (Git, GitHub)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" data-aos="fade-up">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <p>Here you can include feedback from classmates, professors, or team members you’ve worked with on projects.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email or through my social media.</p>
+            <ul>
+                <li>Email: <a href="mailto:ChristopherBlandino0@gmail.com">ChristopherBlandino0@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a></li>
+                <li>GitHub: <a href="https://github.com/cblandino" target="_blank">GitHub Profile</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Christopher Blandino. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AOS for animations -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Rellax.js for Parallax Effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <script>
+        var rellax = new Rellax('.rellax');
+    </script>
+
+    <!-- Particles.js -->
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 3 },
+                move: { speed: 2 },
+                line_linked: { enable: true },
+                color: "#007BFF"
+            }
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
