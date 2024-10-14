@@ -63,6 +63,31 @@ header {
     color: #f8f9fa;
 }
 
+.hero {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text alignment */
+    padding: 0 20px; /* Padding for the sides */
+    background-color: #f8f9fa; /* Background color for the hero section */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Adjust font size for the paragraph */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+.hero .shop-now {
+    margin-top: 20px; /* Add some space above the button */
+}
+
 /* Featured Products Section */
 .featured-products {
     text-align: center;
@@ -72,7 +97,9 @@ header {
 .product-carousel {
     position: relative;
     overflow: hidden; /* Prevent overflow */
+    padding: 20px 0; /* Add vertical padding */
 }
+
 
 .product {
     display: flex;
@@ -88,11 +115,22 @@ header {
     transition: transform 0.5s ease; /* Smooth transition */
     text-align: center; /* Center text within product items */
     opacity: 0.5; /* Make non-active products less visible */
+    overflow: visible; /* Allow overflow to be visible */
 }
 
 .product-item.active {
-    transform: translateY(-30px) scale(1.1); /* Lift and enlarge the highlighted product */
+    transform: scale(1.2); /* Enlarge the highlighted product */
     opacity: 1; /* Fully visible */
+}
+
+.product-item.active img {
+    transform: scale(1.2); /* Enlarge the image */
+    transition: transform 0.5s ease; /* Smooth transition for image scaling */
+}
+
+.product-item img {
+    width: 100%; /* Full width of the product item */
+    transition: transform 0.5s ease; /* Smooth transition for image scaling */
 }
 
 /* Buy Now Button Styles */
