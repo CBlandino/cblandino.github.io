@@ -72,12 +72,12 @@ header {
 }
 
 header h1 {
-    font-size: 4em;
+    font-size: 3.5em;  /* Smaller header font */
     letter-spacing: 2px;
 }
 
 header p {
-    font-size: 1.5em;
+    font-size: 1.2em;  /* Smaller paragraph font */
     letter-spacing: 1px;
 }
 
@@ -111,7 +111,7 @@ header .btn {
 .project h3 {
     color: #002D5C;
     margin-top: 15px;
-    font-size: 1.5em;
+    font-size: 1.3em;  /* Smaller project titles */
 }
 
 .project:hover {
@@ -190,45 +190,26 @@ section {
     z-index: -1;
 }
 
-/* ------------------------ */
+/* -------------------------- */
 /* Media Queries for Larger Screens */
-/* ------------------------ */
+/* -------------------------- */
 
-/* Adjust font sizes and spacing for larger screens */
-@media (min-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
-
-    h1 {
-        font-size: 5em;
-    }
-
-    h2, h3 {
-        font-size: 2.5em;
-    }
-
-    p {
-        font-size: 1.8em;
-    }
-}
-
-/* Adjust for 1080p screens */
+/* Base adjustment for screens larger than 1080p */
 @media (min-width: 1920px) {
     body {
-        font-size: 19px;
+        font-size: 16px;
     }
 
     h1 {
-        font-size: 5.5em;
+        font-size: 4.5em;  /* Reduced */
     }
 
     h2, h3 {
-        font-size: 2.7em;
+        font-size: 2.3em;  /* Reduced */
     }
 
     p {
-        font-size: 1.9em;
+        font-size: 1.6em;
     }
 
     .container {
@@ -236,16 +217,16 @@ section {
     }
 
     .btn {
-        padding: 15px 30px;
+        padding: 12px 24px;
     }
 
     .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 35px;
+        grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+        gap: 33px;
     }
 
     .project {
-        padding: 30px;
+        padding: 28px;
         margin-bottom: 35px;
     }
 
@@ -254,26 +235,73 @@ section {
     }
 
     .project h3 {
-        font-size: 2em;
+        font-size: 1.7em;
+    }
+}
+
+/* Screens between 1080p and 2K (1440p) */
+@media (min-width: 1600px) and (max-width: 1920px) {
+    body {
+        font-size: 15.5px;
+    }
+
+    h1 {
+        font-size: 4.3em;  /* Reduced */
+    }
+
+    h2, h3 {
+        font-size: 2.2em;  /* Reduced */
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .container {
+        width: 88%;
+    }
+
+    .btn {
+        padding: 11px 22px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 32px;
+    }
+
+    .project {
+        padding: 26px;
+        margin-bottom: 32px;
+    }
+
+    .project img {
+        border-radius: 13px;
+    }
+
+    .project h3 {
+        font-size: 1.6em;
     }
 }
 
 /* Media Query for 2K Screens */
 @media (min-width: 2000px) {
     body {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     h1 {
-        font-size: 7em;
+        /* Reduced */
+        font-size: 5.5em;  
     }
 
     h2, h3 {
-        font-size: 3em;
+        /* Reduced */
+        font-size: 2.5em;  
     }
 
     p {
-        font-size: 2em;
+        font-size: 1.7em;
     }
 
     .container {
@@ -281,33 +309,33 @@ section {
     }
 
     .btn {
-        padding: 20px 40px;
+        padding: 18px 36px;
     }
 
     .project-grid {
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        gap: 50px;
+        gap: 45px;
     }
 
     .project {
-        padding: 40px;
-        margin-bottom: 50px;
+        padding: 38px;
+        margin-bottom: 45px;
     }
 
     .project img {
-        border-radius: 20px;
+        border-radius: 18px;
     }
 
     .project h3 {
-        font-size: 2.5em;
+        font-size: 2.1em;
     }
 
     #skills li {
-        margin: 20px;
-        padding: 20px;
+        margin: 15px;
+        padding: 15px;
     }
 
     footer {
-        padding: 30px 0;
+        padding: 25px 0;
     }
 }
