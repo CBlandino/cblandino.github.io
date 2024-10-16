@@ -123,7 +123,7 @@ header {
     opacity: 1; /* Fully visible */
 }
 
-* Responsive for 1440p and larger */
+/* Responsive for 1440p and larger */
 @media (min-width: 1440px) {
     .product-item {
         flex: 0 0 300px; /* Increase product width */
