@@ -100,6 +100,7 @@ header .btn {
     padding: 25px;
     transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 30px;
+    min-height: 450px; /* Increase card length */
 }
 
 .project img {
@@ -177,7 +178,6 @@ section::after {
     margin: 40px auto 0;
 }
 
-/* Increase padding for smoother scrolling */
 section {
     padding: 80px 0;
 }
@@ -191,67 +191,16 @@ section {
 }
 
 /* -------------------------- */
-/* Media Queries for Larger Screens */
+/* Media Queries for Different Screen Resolutions */
 /* -------------------------- */
 
-@media (min-width: 1920px) {
-    body {
-        font-size: 19px;
-    }
-
-    h1 {
-        font-size: 5.5em;
-    }
-
-    h2, h3 {
-        font-size: 2.7em;
-    }
-
-    p {
-        font-size: 1.9em;
-    }
-
-    .container {
-        width: 85%;
-    }
-
-    .btn {
-        padding: 15px 30px;
-    }
-
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 35px;
-    }
-
-    .project {
-        padding: 30px;
-        margin-bottom: 35px;
-    }
-
-    .project img {
-        border-radius: 15px;
-    }
-
-    .project h3 {
-        font-size: 2em;
-    }
-}
-
-/* Smaller Text for About, Projects, Skills, Contact Sections */
-#about, #projects, #skills, #contact {
-    font-size: 0.9em; /* Smaller font size for these sections */
-}
-
+/* Smaller Text for About, Projects, Skills, Contact Sections (p only) */
 #about p, #projects p, #skills p, #contact p {
-    font-size: 0.9em; /* Smaller paragraph text */
+    font-size: 0.9em; /* Small font size for paragraphs */
 }
 
-#about h2, #projects h2, #skills h2, #contact h2 {
-    font-size: 1.5em; /* Smaller section headings */
-}
-
-@media (min-width: 1600px) and (max-width: 1920px) {
+/* Adjustments for 1080p to 2K screens */
+@media (min-width: 1920px) and (max-width: 2000px) {
     body {
         font-size: 18.5px;
     }
@@ -284,6 +233,7 @@ section {
     .project {
         padding: 28px;
         margin-bottom: 33px;
+        min-height: 470px; /* Adjust project card length */
     }
 
     .project img {
@@ -294,17 +244,9 @@ section {
         font-size: 1.9em;
     }
 
-    /* Smaller Text in About, Projects, Skills, Contact */
+    /* Ensure even spacing of text */
     #about, #projects, #skills, #contact {
-        font-size: 0.88em;
-    }
-
-    #about p, #projects p, #skills p, #contact p {
-        font-size: 0.88em;
-    }
-
-    #about h2, #projects h2, #skills h2, #contact h2 {
-        font-size: 1.4em;
+        line-height: 1.6;
     }
 }
 
@@ -342,6 +284,7 @@ section {
     .project {
         padding: 40px;
         margin-bottom: 50px;
+        min-height: 500px; /* Increase card length */
     }
 
     .project img {
@@ -352,25 +295,13 @@ section {
         font-size: 2.5em;
     }
 
-    #skills li {
-        margin: 20px;
-        padding: 20px;
-    }
-
-    footer {
-        padding: 30px 0;
-    }
-
-    /* Smaller Text for About, Projects, Skills, Contact */
-    #about, #projects, #skills, #contact {
-        font-size: 0.85em;
-    }
-
+    /* Paragraph text size */
     #about p, #projects p, #skills p, #contact p {
-        font-size: 0.85em;
+        font-size: 0.9em;
     }
 
-    #about h2, #projects h2, #skills h2, #contact h2 {
-        font-size: 1.3em;
+    /* Ensure even spacing of text */
+    #about, #projects, #skills, #contact {
+        line-height: 1.6;
     }
 }
