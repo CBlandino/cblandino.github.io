@@ -104,6 +104,11 @@ header .btn {
     min-height: 195px; /* Increase card length */
 }
 
+.project p {
+    /* Adjust the bottom margin of the paragraph */
+    margin-bottom: 25px; 
+}
+
 .project img {
     max-width: 100%;
     border-radius: 10px;
