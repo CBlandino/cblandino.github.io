@@ -285,7 +285,7 @@ section {
     .project {
         padding: 40px;
         margin-bottom: 50px;
-        min-height: 160px; /* Increase card length */
+        min-height: 140px; /* Increase card length */
     }
 
     .project img {
