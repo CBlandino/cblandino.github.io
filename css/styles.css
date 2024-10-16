@@ -72,12 +72,12 @@ header {
 }
 
 header h1 {
-    font-size: 3.5em;  /* Smaller header font */
+    font-size: 4em;
     letter-spacing: 2px;
 }
 
 header p {
-    font-size: 1.2em;  /* Smaller paragraph font */
+    font-size: 1.5em;
     letter-spacing: 1px;
 }
 
@@ -111,7 +111,7 @@ header .btn {
 .project h3 {
     color: #002D5C;
     margin-top: 15px;
-    font-size: 1.3em;  /* Smaller project titles */
+    font-size: 1.5em;
 }
 
 .project:hover {
@@ -194,22 +194,21 @@ section {
 /* Media Queries for Larger Screens */
 /* -------------------------- */
 
-/* Base adjustment for screens larger than 1080p */
 @media (min-width: 1920px) {
     body {
-        font-size: 16px;
+        font-size: 19px;
     }
 
     h1 {
-        font-size: 4.5em;  /* Reduced */
+        font-size: 5.5em;
     }
 
     h2, h3 {
-        font-size: 2.3em;  /* Reduced */
+        font-size: 2.7em;
     }
 
     p {
-        font-size: 1.6em;
+        font-size: 1.9em;
     }
 
     .container {
@@ -217,7 +216,64 @@ section {
     }
 
     .btn {
-        padding: 12px 24px;
+        padding: 15px 30px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 35px;
+    }
+
+    .project {
+        padding: 30px;
+        margin-bottom: 35px;
+    }
+
+    .project img {
+        border-radius: 15px;
+    }
+
+    .project h3 {
+        font-size: 2em;
+    }
+}
+
+/* Smaller Text for About, Projects, Skills, Contact Sections */
+#about, #projects, #skills, #contact {
+    font-size: 0.9em; /* Smaller font size for these sections */
+}
+
+#about p, #projects p, #skills p, #contact p {
+    font-size: 0.9em; /* Smaller paragraph text */
+}
+
+#about h2, #projects h2, #skills h2, #contact h2 {
+    font-size: 1.5em; /* Smaller section headings */
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+    body {
+        font-size: 18.5px;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    h2, h3 {
+        font-size: 2.6em;
+    }
+
+    p {
+        font-size: 1.8em;
+    }
+
+    .container {
+        width: 88%;
+    }
+
+    .btn {
+        padding: 13px 26px;
     }
 
     .project-grid {
@@ -227,52 +283,7 @@ section {
 
     .project {
         padding: 28px;
-        margin-bottom: 35px;
-    }
-
-    .project img {
-        border-radius: 15px;
-    }
-
-    .project h3 {
-        font-size: 1.7em;
-    }
-}
-
-/* Screens between 1080p and 2K (1440p) */
-@media (min-width: 1600px) and (max-width: 1920px) {
-    body {
-        font-size: 15.5px;
-    }
-
-    h1 {
-        font-size: 4.3em;  /* Reduced */
-    }
-
-    h2, h3 {
-        font-size: 2.2em;  /* Reduced */
-    }
-
-    p {
-        font-size: 1.5em;
-    }
-
-    .container {
-        width: 88%;
-    }
-
-    .btn {
-        padding: 11px 22px;
-    }
-
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        gap: 32px;
-    }
-
-    .project {
-        padding: 26px;
-        margin-bottom: 32px;
+        margin-bottom: 33px;
     }
 
     .project img {
@@ -280,28 +291,39 @@ section {
     }
 
     .project h3 {
-        font-size: 1.6em;
+        font-size: 1.9em;
+    }
+
+    /* Smaller Text in About, Projects, Skills, Contact */
+    #about, #projects, #skills, #contact {
+        font-size: 0.88em;
+    }
+
+    #about p, #projects p, #skills p, #contact p {
+        font-size: 0.88em;
+    }
+
+    #about h2, #projects h2, #skills h2, #contact h2 {
+        font-size: 1.4em;
     }
 }
 
 /* Media Query for 2K Screens */
 @media (min-width: 2000px) {
     body {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     h1 {
-        /* Reduced */
-        font-size: 5.5em;  
+        font-size: 7em;
     }
 
     h2, h3 {
-        /* Reduced */
-        font-size: 2.5em;  
+        font-size: 3em;
     }
 
     p {
-        font-size: 1.7em;
+        font-size: 2em;
     }
 
     .container {
@@ -309,33 +331,46 @@ section {
     }
 
     .btn {
-        padding: 18px 36px;
+        padding: 20px 40px;
     }
 
     .project-grid {
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        gap: 45px;
+        gap: 50px;
     }
 
     .project {
-        padding: 38px;
-        margin-bottom: 45px;
+        padding: 40px;
+        margin-bottom: 50px;
     }
 
     .project img {
-        border-radius: 18px;
+        border-radius: 20px;
     }
 
     .project h3 {
-        font-size: 2.1em;
+        font-size: 2.5em;
     }
 
     #skills li {
-        margin: 15px;
-        padding: 15px;
+        margin: 20px;
+        padding: 20px;
     }
 
     footer {
-        padding: 25px 0;
+        padding: 30px 0;
+    }
+
+    /* Smaller Text for About, Projects, Skills, Contact */
+    #about, #projects, #skills, #contact {
+        font-size: 0.85em;
+    }
+
+    #about p, #projects p, #skills p, #contact p {
+        font-size: 0.85em;
+    }
+
+    #about h2, #projects h2, #skills h2, #contact h2 {
+        font-size: 1.3em;
     }
 }
