@@ -47,6 +47,7 @@ a:hover {
 .btn-secondary {
     background-color: #002D5C;
     color: #fff;
+    margin-top: -10px;
 }
 
 .btn-tertiary {
@@ -100,7 +101,7 @@ header .btn {
     padding: 25px;
     transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 30px;
-    min-height: 450px; /* Increase card length */
+    min-height: 160px; /* Increase card length */
 }
 
 .project img {
@@ -233,7 +234,7 @@ section {
     .project {
         padding: 28px;
         margin-bottom: 33px;
-        min-height: 470px; /* Adjust project card length */
+        min-height: 180px; /* Adjust project card length */
     }
 
     .project img {
@@ -284,7 +285,7 @@ section {
     .project {
         padding: 40px;
         margin-bottom: 50px;
-        min-height: 500px; /* Increase card length */
+        min-height: 180px; /* Increase card length */
     }
 
     .project img {
