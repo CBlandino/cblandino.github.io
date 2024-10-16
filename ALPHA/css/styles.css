@@ -118,32 +118,12 @@ header {
     overflow: visible; /* Allow overflow to be visible */
 }
 
+
 .product-item.active {
     transform: scale(1.2); /* Enlarge the highlighted product */
     opacity: 1; /* Fully visible */
 }
 
-/* Responsive for 1440p and larger */
-@media (min-width: 1440px) {
-    .product-item {
-        flex: 0 0 300px; /* Increase product width */
-    }
-
-    .product-item.active {
-        transform: translate(-50%, -50%) scale(1.3); /* Increase the scale for larger screens */
-    }
-}
-
-/* Responsive for 2K resolution (2560px) */
-@media (min-width: 2560px) {
-    .product-item {
-        flex: 0 0 350px; /* Increase product width further for 2K */
-    }
-
-    .product-item.active {
-        transform: translate(-50%, -50%) scale(1.4); /* Further increase the scale for larger screens */
-    }
-}
 
 .product-item.active img {
     transform: scale(1.2); /* Enlarge the image */
@@ -192,8 +172,6 @@ header {
 .carousel-controls button:hover {
     background-color: #0056b3; /* Darker shade on hover */
 }
-
-
 
 /* Login Popup Styles */
 .login-popup {
