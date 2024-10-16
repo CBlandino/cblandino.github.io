@@ -101,7 +101,7 @@ header .btn {
     padding: 25px;
     transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 30px;
-    min-height: 160px; /* Increase card length */
+    min-height: 195px; /* Increase card length */
 }
 
 .project img {
@@ -197,7 +197,7 @@ section {
 
 /* Smaller Text for About, Projects, Skills, Contact Sections (p only) */
 #about p, #projects p, #skills p, #contact p {
-    font-size: 0.9em; /* Small font size for paragraphs */
+    font-size: 0.95em; /* Small font size for paragraphs */
 }
 
 /* Adjustments for 1080p to 2K screens */
@@ -234,7 +234,7 @@ section {
     .project {
         padding: 28px;
         margin-bottom: 33px;
-        min-height: 160px; /* Adjust project card length */
+        min-height: 195px; /* Adjust project card length */
     }
 
     .project img {
@@ -285,7 +285,7 @@ section {
     .project {
         padding: 40px;
         margin-bottom: 50px;
-        min-height: 140px; /* Increase card length */
+        min-height: 195px; /* Increase card length */
     }
 
     .project img {
@@ -298,7 +298,7 @@ section {
 
     /* Paragraph text size */
     #about p, #projects p, #skills p, #contact p {
-        font-size: 0.9em;
+        font-size: 0.95em;
     }
 
     /* Ensure even spacing of text */
