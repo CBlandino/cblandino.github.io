@@ -337,7 +337,7 @@ section {
 /* Contact Section */
 #contact {
     background: linear-gradient(135deg, #E8E8E8, #DCDCDC);
-    color: #fff;
+    color: #333;
     padding: 50px 0;
     text-align: center;
 }
