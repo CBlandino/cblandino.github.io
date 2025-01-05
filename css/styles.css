@@ -32,41 +32,135 @@ a:hover {
 /* Taskbar */
 .taskbar {
     background-color: #000;
-    overflow: hidden;
-    padding: 10px 0;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    display: flex;
-    justify-content: flex-end;
+    display: flex; /* Flexbox ensures all items align in a row */
+    justify-content: space-between; /* Distributes space between left and right sections */
+    align-items: center; /* Vertically aligns all items */
 }
 
-.taskbar ul {
+/* Left Section (Name and Email) */
+.taskbar-left {
+    display: flex; /* Flexbox aligns name and email horizontally */
+    align-items: center; /* Vertically aligns name and email */
+}
+
+.taskbar-name {
+    font-family: 'Merriweather', serif; /* Sophisticated font for the name */
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 10px; /* Spacing between name and divider */
+}
+
+.taskbar-divider {
+    color: #fff;
+    font-size: 1.2em;
+    margin: 0 10px; /* Equal spacing on both sides of the divider */
+}
+
+.taskbar-email {
+    font-family: 'Roboto', sans-serif; /* Simple font for the email */
+    font-size: 1em;
+    color: #ddd;
+}
+
+/* Dropdown Menu Section */
+.taskbar-dropdown {
+    position: relative;
+    margin-left: auto; /* Automatically push the dropdown button to the left of the rightmost content */
+    margin-right: 30px; /* Add some spacing to the right edge for better balance */
+}
+
+.dropdown-btn {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    border: 1px solid #fff;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.dropdown-btn:hover {
+    background-color: #008C74;
+    transform: scale(1.05);
+}
+
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #333;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 50px; /* Align below the button */
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.taskbar li {
-    padding: 0 20px;
-    position: relative;
+/* Show menu when hovering over the button or menu */
+.taskbar-dropdown:hover .dropdown-menu {
+    display: block;
 }
 
-.taskbar a {
+.dropdown-menu li {
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
     color: #fff;
     text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    font-weight: bold;
+    font-size: 1em;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.taskbar a:hover {
+.dropdown-menu li a:hover {
     background-color: #008C74;
     color: #fff;
-    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .taskbar {
+        flex-wrap: wrap; /* Stack items on smaller screens */
+    }
+
+    .taskbar-left {
+        flex: 1 100%; /* Full width for the left section */
+        text-align: center; /* Center align the left section */
+        margin-bottom: 10px;
+    }
+
+    .dropdown-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        top: 40px;
+        left: 0;
+        right: 0;
+    }
+
+    .dropdown-menu li {
+        text-align: center;
+    }
 }
 
 /* Buttons */
@@ -399,106 +493,82 @@ section {
 /* Media Queries for Different Screen Resolutions */
 /* -------------------------- */
 
-/* Adjustments for 1080p to 2K screens */
-@media (min-width: 1920px) and (max-width: 2000px) {
+
+/* For 640x480 pixels */
+@media (max-width: 640px) {
     body {
-        font-size: 18.5px;
+        font-size: 14px;
     }
-
-    h1 {
-        font-size: 5em;
-    }
-
-    h2, h3 {
-        font-size: 2.6em;
-    }
-
-    p {
-        font-size: 1.8em;
-    }
-
     .container {
-        width: 88%;
+        width: 95%;
     }
-
-    .btn {
-        padding: 13px 26px;
+    header h1 {
+        font-size: 2em;
     }
-
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-        gap: 33px;
+    header p {
+        font-size: 1em;
     }
-
-    .project {
-        padding: 28px;
-        margin-bottom: 33px;
-        min-height: 195px;
+    .project-card {
+        padding: 15px;
     }
-
-    .project img {
-        border-radius: 13px;
-    }
-
-    .project h3 {
-        font-size: 1.9em;
-    }
-
-    #about, #projects, #skills, #contact {
-        line-height: 1.6;
+    .taskbar li {
+        padding: 0 10px;
     }
 }
 
-/* Media Query for 2K Screens */
-@media (min-width: 2000px) {
+/* For 1280x720 pixels */
+@media (min-width: 641px) and (max-width: 1280px) {
+    body {
+        font-size: 16px;
+    }
+    header h1 {
+        font-size: 3em;
+    }
+    header p {
+        font-size: 1.2em;
+    }
+    .project-card {
+        padding: 20px;
+    }
+    .taskbar li {
+        padding: 0 15px;
+    }
+}
+
+/* For 1920x1080 pixels */
+@media (min-width: 1281px) and (max-width: 1920px) {
+    body {
+        font-size: 18px;
+    }
+    header h1 {
+        font-size: 4em;
+    }
+    header p {
+        font-size: 1.5em;
+    }
+    .project-card {
+        padding: 25px;
+    }
+    .taskbar li {
+        padding: 0 20px;
+    }
+}
+
+/* For 2560x1440 pixels */
+@media (min-width: 1921px) and (max-width: 2560px) {
     body {
         font-size: 20px;
     }
-
-    h1 {
-        font-size: 7em;
+    header h1 {
+        font-size: 5em;
     }
-
-    h2, h3 {
-        font-size: 3em;
-    }
-
-    p {
+    header p {
         font-size: 2em;
     }
-
-    .container {
-        width: 75%;
+    .project-card {
+        padding: 30px;
     }
-
-    .btn {
-        padding: 20px 40px;
-    }
-
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        gap: 50px;
-    }
-
-    .project {
-        padding: 40px;
-        margin-bottom: 50px;
-        min-height: 195px;
-    }
-
-    .project img {
-        border-radius: 20px;
-    }
-
-    .project h3 {
-        font-size: 2.5em;
-    }
-
-    #about p, #projects p, #skills p, #contact p {
-        font-size: 1.2em;
-    }
-
-    #about, #projects, #skills, #contact {
-        line-height: 1.6;
+    .taskbar li {
+        padding: 0 25px;
     }
 }
