@@ -493,26 +493,56 @@ section {
 /* Media Queries for Different Screen Resolutions */
 /* -------------------------- */
 
+body {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+/* Media Queries for Specific Resolutions */
 
 /* For 640x480 pixels */
 @media (max-width: 640px) {
     body {
         font-size: 14px;
-    }
-    .container {
-        width: 95%;
+        line-height: 1.4;
     }
     header h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
     header p {
         font-size: 1em;
     }
+    .container {
+        width: 95%;
+    }
+    .taskbar-left {
+        flex-direction: column;
+        text-align: center;
+    }
+    .dropdown-btn {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
     .project-card {
         padding: 15px;
     }
-    .taskbar li {
-        padding: 0 10px;
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 }
 
@@ -520,18 +550,24 @@ section {
 @media (min-width: 641px) and (max-width: 1280px) {
     body {
         font-size: 16px;
+        line-height: 1.5;
     }
     header h1 {
-        font-size: 3em;
+        font-size: 3.5em;
     }
     header p {
         font-size: 1.2em;
     }
-    .project-card {
-        padding: 20px;
+    .taskbar-left {
+        flex-direction: row;
     }
-    .taskbar li {
-        padding: 0 15px;
+    .dropdown-btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
@@ -539,6 +575,7 @@ section {
 @media (min-width: 1281px) and (max-width: 1920px) {
     body {
         font-size: 18px;
+        line-height: 1.6;
     }
     header h1 {
         font-size: 4em;
@@ -546,11 +583,9 @@ section {
     header p {
         font-size: 1.5em;
     }
-    .project-card {
-        padding: 25px;
-    }
-    .taskbar li {
-        padding: 0 20px;
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 }
 
@@ -558,6 +593,7 @@ section {
 @media (min-width: 1921px) and (max-width: 2560px) {
     body {
         font-size: 20px;
+        line-height: 1.8;
     }
     header h1 {
         font-size: 5em;
@@ -565,10 +601,9 @@ section {
     header p {
         font-size: 2em;
     }
-    .project-card {
-        padding: 30px;
-    }
-    .taskbar li {
-        padding: 0 25px;
+    .project-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
     }
 }
+
