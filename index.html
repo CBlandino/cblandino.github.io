@@ -7,24 +7,20 @@
     <meta name="keywords" content="portfolio, web development, Java, GitHub">
     <title>Christopher Blandino Portfolio</title>
 
+    <!-- Taskbar -->
     <nav class="taskbar">
         <div class="taskbar-left">
             <span class="taskbar-name">Christopher Blandino</span>
             <span class="taskbar-divider">|</span>
             <span class="taskbar-email">christopherblandino0@gmail.com</span>
         </div>
-        <div class="taskbar-dropdown">
-            <button class="dropdown-btn">Menu</button>
-            <ul class="dropdown-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="taskbar-right">
+            <a href="#about" class="taskbar-link">About</a>
+            <a href="#projects" class="taskbar-link">Projects</a>
+            <a href="#skills" class="taskbar-link">Skills</a>
+            <a href="#contact" class="taskbar-link">Contact</a>
         </div>
     </nav>
-    
 
     <!-- AOS for scroll animations -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
@@ -46,13 +42,27 @@
         </div>
     </header>
 
-    <!-- About Section -->
     <section id="about" data-aos="fade-up">
         <div class="container">
             <h2>About Me</h2>
-            <p>I am a Computer Science student at the University at Albany, set to graduate in May 2025. With a solid foundation in programming languages such as Java, Python, and C++, I have developed various projects that demonstrate my skills in software development and system design. I thrive in collaborative environments, as shown through my leadership in hackathons and project management roles. I am eager to apply my technical expertise and problem-solving abilities to create innovative solutions in technology.</p>
+            <div class="about-grid">
+                <div class="about-image">
+                    <!-- Placeholder for my image -->
+                    <img src="images/me.png" alt="Christopher Blandino">
+                </div>
+                <div class="about-text">
+                    <p>Hi! I'm Christopher Blandino, a Computer Science student at the University at Albany, set to graduate in May 2025. With a deep interest in web development and software engineering, I have experience in various languages, including Java, Python, and C++. Throughout my academic journey, I’ve collaborated on numerous projects, gaining hands-on experience in full-stack development, debugging, and system design.</p>
+                    <ul>
+                        <li><strong>Education:</strong> Bachelor of Science in Computer Science</li>
+                        <li><strong>University:</strong> University at Albany</li>
+                        <li><strong>Expected Graduation:</strong> May 2025</li>
+                        <li><strong>Skills:</strong> Java, Python, C++, Web Development</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
+    
 
     <!-- Projects Section -->
     <section id="projects" data-aos="fade-up">
@@ -154,23 +164,22 @@
     <section id="contact" data-aos="fade-up">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, please feel free to reach out through the following channels:</p>
+            <p>Feel free to reach out! Whether you have a question, want to collaborate on a project, or just want to connect, I'd love to hear from you.</p>
+            <p>You can contact me through any of the methods below:</p>
             <div class="contact-options">
-                <div class="contact-card">
-                    <h3>Email</h3>
-                    <p><a href="mailto:ChristopherBlandino0@gmail.com">Christopher Blandino</a></p>
-                </div>
-                <div class="contact-card">
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/christopher-blandino-b48594307" target="_blank">LinkedIn Profile</a></p>
-                </div>
-                <div class="contact-card">
-                    <h3>GitHub</h3>
-                    <p><a href="https://github.com/cblandino" target="_blank">GitHub Profile</a></p>
-                </div>
+                <a href="mailto:ChristopherBlandino0@gmail.com" class="contact-link">
+                    <img src="images/email.png" alt="Email" class="contact-image"> Email
+                </a>
+                <a href="https://www.linkedin.com/in/christopher-blandino-b48594307" target="_blank" class="contact-link">
+                    <img src="images/LinkedIn.png" alt="LinkedIn" class="contact-image"> LinkedIn
+                </a>
+                <a href="https://github.com/cblandino" target="_blank" class="contact-link">
+                    <img src="images/Git.png" alt="GitHub" class="contact-image"> GitHub
+                </a>
             </div>
         </div>
-    </section>    
+    </section>
+    
 
     <!-- Footer -->
     <footer>
@@ -206,5 +215,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/dropdown.js"></script>
+    <script src="js/current.js"></script>
 </body>
 </html>

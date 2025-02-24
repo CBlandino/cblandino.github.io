@@ -32,14 +32,42 @@ a:hover {
 /* Taskbar */
 .taskbar {
     background-color: #000;
-    padding: 10px 20px;
+    padding: 5px 20px; /* Reduced padding for compactness */
     position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
     display: flex; /* Flexbox ensures all items align in a row */
     justify-content: space-between; /* Distributes space between left and right sections */
     align-items: center; /* Vertically aligns all items */
+}
+
+/* Taskbar Links */
+.taskbar-right {
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    flex-grow: 1; /* Allow this section to grow and fill available space */
+    max-width: 50%; /* Ensure it doesn't stretch too far */
+    width: auto; /* Allow natural width */
+    gap: 15px; /* Add space between the links */
+}
+
+
+.taskbar-link {
+    color: #A4C8E1;
+    font-size: 1.2em;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Underline the active section link */
+.taskbar-link.underline {
+    border-bottom: 2px solid #008C74;
+}
+
+/* Hover effect */
+.taskbar-link:hover {
+    color: #008C74;
 }
 
 /* Left Section (Name and Email) */
@@ -49,90 +77,25 @@ a:hover {
 }
 
 .taskbar-name {
-    font-family: 'Merriweather', serif; /* Sophisticated font for the name */
+    font-family: 'Merriweather', serif;
     font-size: 1.5em;
     font-weight: bold;
     color: #fff;
-    margin-right: 10px; /* Spacing between name and divider */
+    margin-right: 10px;
 }
 
 .taskbar-divider {
     color: #fff;
     font-size: 1.2em;
-    margin: 0 10px; /* Equal spacing on both sides of the divider */
+    margin: 0 10px;
 }
 
 .taskbar-email {
-    font-family: 'Roboto', sans-serif; /* Simple font for the email */
+    font-family: 'Roboto', sans-serif;
     font-size: 1em;
     color: #ddd;
 }
 
-/* Dropdown Menu Section */
-.taskbar-dropdown {
-    position: relative;
-    margin-left: auto; /* Automatically push the dropdown button to the left of the rightmost content */
-    margin-right: 30px; /* Add some spacing to the right edge for better balance */
-}
-
-.dropdown-btn {
-    background-color: #000;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    border: 1px solid #fff;
-    padding: 12px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.dropdown-btn:hover {
-    background-color: #008C74;
-    transform: scale(1.05);
-}
-
-.dropdown-menu {
-    display: none; /* Hidden by default */
-    position: absolute;
-    background-color: #333;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border-radius: 5px;
-    overflow: hidden;
-    top: 50px; /* Align below the button */
-    right: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Show menu when hovering over the button or menu */
-.taskbar-dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li {
-    border-bottom: 1px solid #444;
-}
-
-.dropdown-menu li:last-child {
-    border-bottom: none;
-}
-
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #008C74;
-    color: #fff;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -192,6 +155,13 @@ a:hover {
 .btn:hover {
     transform: translateY(-5px);
     background-color: #333333;
+}
+
+/* About Section */
+#about {
+    background: linear-gradient(135deg, #F7F7F7, #EFEFEF);
+    padding: 80px 0; /* Increased padding for a larger section */
+    text-align: center;
 }
 
 /* Header */
@@ -430,64 +400,74 @@ section {
 
 /* Contact Section */
 #contact {
-    background: linear-gradient(135deg, #E8E8E8, #DCDCDC);
+    background: linear-gradient(135deg, #e8e8e8, #dcdcdc); /* Soft gradient for background */
     color: #333;
-    padding: 50px 0;
+    padding: 80px 0; /* Ample padding for a spacious feel */
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 #contact h2 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin-bottom: 20px;
+    color: #002d5c; /* Darker color for headings */
 }
 
 #contact p {
     font-size: 1.2em;
     margin-bottom: 40px;
+    color: #555;
 }
 
+/* Container for buttons */
 .contact-options {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 30px; /* Add more space between buttons */
+    flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+    margin-top: 40px; /* Space from paragraph */
 }
 
-.contact-card {
-    background: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.contact-card h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #A4C8E1;
-}
-
-.contact-card p {
-    font-size: 1em;
-}
-
-.contact-card a {
+/* Contact Button Style */
+.contact-link {
+    font-size: 1.1em;
     color: #fff;
+    background-color: #008c74; /* Main button color */
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px; /* Rounded corners */
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px; /* Space between buttons */
+    min-width: 160px; /* Ensures a minimum size for each button */
+    justify-content: center; /* Centers text and icon */
 }
 
-.contact-card a:hover {
-    color: #008C74;
+.contact-link:hover {
+    background-color: #005f4f; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight grow effect */
 }
 
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+.contact-link:active {
+    transform: scale(0.98); /* Slight shrink on click */
 }
+
+.contact-image {
+    width: 25px; /* Smaller icon size for consistency */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* For smaller screens, buttons will adjust */
+@media (max-width: 768px) {
+    .contact-options {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px;
+    }
+}
+
+
 
 /* -------------------------- */
 /* Media Queries for Different Screen Resolutions */
