@@ -184,14 +184,15 @@
       </div>
 
  <!-- Animated Contact Form -->
-<form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+<!-- Replace your current form with this -->
+<form id="contact-form" class="contact-form">
   <div class="form-group">
-    <input type="text" id="name" name="name" required>
+    <input type="text" id="name" name="from_name" required>
     <label for="name">Your Name</label>
     <div class="underline"></div>
   </div>
   <div class="form-group">
-    <input type="email" id="email" name="_replyto" required>
+    <input type="email" id="email" name="from_email" required>
     <label for="email">Your Email</label>
     <div class="underline"></div>
   </div>
@@ -201,19 +202,22 @@
     <div class="underline"></div>
   </div>
   <button type="submit" class="btn btn-primary">Send Message</button>
-  
-  <!-- Hidden honeypot field to prevent spam -->
-  <input type="text" name="_gotcha" style="display:none">
-  
-  <!-- Success/Error messages -->
   <div id="form-status" class="form-status"></div>
 </form>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init('service_icgj45i');
+  })();
+</script>
+
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Christopher Blandino. All Rights Reserved.</p>
+      <p>&copy; 2026 Christopher Blandino. All Rights Reserved.</p>
     </div>
   </footer>
 
