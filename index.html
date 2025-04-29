@@ -183,33 +183,55 @@
         </a>
       </div>
 
- <!-- Animated Contact Form -->
-<!-- Replace your current form with this -->
-<form id="contact-form" class="contact-form">
+      <form class="contact-form" 
+      action="mailto:christopherblandino0@gmail.com" 
+      method="post" 
+      enctype="text/plain"
+      onsubmit="showSuccessMessage(event)">
+
   <div class="form-group">
-    <input type="text" id="name" name="from_name" required>
-    <label for="name">Your Name</label>
+    <input type="text" name="name" required>
+    <label>Your Name</label>
     <div class="underline"></div>
   </div>
+  
   <div class="form-group">
-    <input type="email" id="email" name="from_email" required>
-    <label for="email">Your Email</label>
+    <input type="email" name="email" required>
+    <label>Your Email</label>
     <div class="underline"></div>
   </div>
+  
   <div class="form-group">
-    <textarea id="message" name="message" required></textarea>
-    <label for="message">Your Message</label>
+    <textarea name="message" required></textarea>
+    <label>Your Message</label>
     <div class="underline"></div>
   </div>
+  
   <button type="submit" class="btn btn-primary">Send Message</button>
+  
   <div id="form-status" class="form-status"></div>
 </form>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
-  (function() {
-    emailjs.init('service_icgj45i');
-  })();
+function showSuccessMessage(e) {
+  e.preventDefault();
+  const form = e.target;
+  const status = document.getElementById('form-status');
+  
+  status.innerHTML = 'Opening email client... Please send your message.';
+  status.className = 'form-status success';
+  status.style.display = 'block';
+  
+  // Still attempt to open mail client
+  setTimeout(() => {
+    form.submit();
+  }, 1500);
+  
+  // Hide message after 5 seconds
+  setTimeout(() => {
+    status.style.display = 'none';
+  }, 5000);
+}
 </script>
 
   </section>
@@ -350,7 +372,7 @@
   <script src="js/main.js"></script>
   <script src="js/dropdown.js"></script>
   <script src="js/current.js"></script>
-  <script src="js/form-handler.js"></script>
+  <script src="js/email-sender.js"></script>
   
   <!-- enhancement scripts -->
   <script src="js/3d-skills.js"></script>
