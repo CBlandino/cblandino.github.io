@@ -150,6 +150,16 @@
           <h3>Debugging</h3>
           <p>JUnit, Selenium, Jest</p>
         </div>
+        <div class="skill-item">
+          <i class="fas fa-mobile"></i>
+          <h3>Mobile Development</h3>
+          <p>Flutter, Dart, Android Studio</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-server"></i>
+          <h3>Systems Programming</h3>
+          <p>Go (Golang), C, Rust</p>
+        </div>
       </div>
     </div>
   </section>
@@ -173,26 +183,31 @@
         </a>
       </div>
 
-      <!-- Animated Contact Form -->
-      <div class="contact-form">
-        <div class="form-group">
-          <input type="text" id="name" required>
-          <label for="name">Your Name</label>
-          <div class="underline"></div>
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" required>
-          <label for="email">Your Email</label>
-          <div class="underline"></div>
-        </div>
-        <div class="form-group">
-          <textarea id="message" required></textarea>
-          <label for="message">Your Message</label>
-          <div class="underline"></div>
-        </div>
-        <button class="btn btn-primary">Send Message</button>
-      </div>
-    </div>
+ <!-- Animated Contact Form -->
+<form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+  <div class="form-group">
+    <input type="text" id="name" name="name" required>
+    <label for="name">Your Name</label>
+    <div class="underline"></div>
+  </div>
+  <div class="form-group">
+    <input type="email" id="email" name="_replyto" required>
+    <label for="email">Your Email</label>
+    <div class="underline"></div>
+  </div>
+  <div class="form-group">
+    <textarea id="message" name="message" required></textarea>
+    <label for="message">Your Message</label>
+    <div class="underline"></div>
+  </div>
+  <button type="submit" class="btn btn-primary">Send Message</button>
+  
+  <!-- Hidden honeypot field to prevent spam -->
+  <input type="text" name="_gotcha" style="display:none">
+  
+  <!-- Success/Error messages -->
+  <div id="form-status" class="form-status"></div>
+</form>
   </section>
 
   <!-- Footer -->
@@ -331,6 +346,7 @@
   <script src="js/main.js"></script>
   <script src="js/dropdown.js"></script>
   <script src="js/current.js"></script>
+  <script src="js/form-handler.js"></script>
   
   <!-- enhancement scripts -->
   <script src="js/3d-skills.js"></script>

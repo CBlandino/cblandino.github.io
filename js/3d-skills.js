@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const skills = [
-      "Java", "Python", "C++", "JavaScript", 
-      "HTML5", "CSS3", "React", "Node.js",
-      "SQL", "Git", "AWS", "Docker", "Algorithms",
-      "Data Structures", "Spring Boot", "REST APIs"
+        "Java", "Python", "C++", "JavaScript", 
+        "HTML5", "CSS3", "React", "Node.js",
+        "SQL", "Git", "AWS", "Docker", 
+        "Flutter", "Golang", "Algorithms",
+        "Data Structures", "Spring Boot", "REST APIs"
     ];
   
     const container = document.getElementById('skill-cloud');

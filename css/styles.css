@@ -464,10 +464,22 @@
     border-color: var(--secondary-color);
   }
   
+  .fa-mobile {
+    color: #02569B; /* Flutter blue */
+  }
+  
+  .fa-server {
+    color: #00ADD8; /* Go blue */
+  }
+  
   .skill-item i {
     font-size: 2.5rem;
-    color: var(--secondary-color);
     margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .skill-item:hover i {
+    transform: scale(1.2);
   }
   
   .skill-item h3 {
@@ -544,6 +556,26 @@
     margin: 2rem auto;
   }
   
+/* Contact Form Status Messages */
+.form-status {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    display: none;
+  }
+  
+  .form-status.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+  }
+  
+  .form-status.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+  }
+
   .form-group {
     position: relative;
     margin-bottom: 2rem;
