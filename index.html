@@ -1,220 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Christopher Blandino showcasing web development and Java projects.">
-    <meta name="keywords" content="portfolio, web development, Java, GitHub">
-    <title>Christopher Blandino Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Christopher Blandino showcasing web development and Java projects.">
+  <meta name="keywords" content="portfolio, web development, Java, GitHub">
+  <title>Christopher Blandino Portfolio</title>
 
-    <!-- Taskbar -->
-    <nav class="taskbar">
-        <div class="taskbar-left">
-            <span class="taskbar-name">Christopher Blandino</span>
-            <span class="taskbar-divider">|</span>
-            <span class="taskbar-email">christopherblandino0@gmail.com</span>
-        </div>
-        <div class="taskbar-right">
-            <a href="#about" class="taskbar-link">About</a>
-            <a href="#projects" class="taskbar-link">Projects</a>
-            <a href="#skills" class="taskbar-link">Skills</a>
-            <a href="#contact" class="taskbar-link">Contact</a>
-        </div>
-    </nav>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
-    <!-- AOS for scroll animations -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="css/styles.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Particles.js for background animations -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- AOS for scroll animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Particles.js for background animations -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- Three.js for 3D elements -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
 </head>
+
 <body>
- 
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
 
-    <!-- Header with Parallax -->
-    <header class="rellax" data-rellax-speed="-2">
-        <div class="container">
-            <h1>Christopher Blandino</h1>
-            <p>Senior in College | Web Developer & Java Programmer</p>
+  <!-- Loading Animation -->
+  <div class="page-loader">
+    <div class="loader-spinner">
+      <div class="spinner-sector spinner-sector-blue"></div>
+      <div class="spinner-sector spinner-sector-green"></div>
+      <div class="spinner-sector spinner-sector-white"></div>
+    </div>
+  </div>
+
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Taskbar -->
+  <nav class="taskbar">
+    <div class="taskbar-left">
+      <span class="taskbar-name">Christopher Blandino</span>
+      <span class="taskbar-divider">|</span>
+      <span class="taskbar-email">christopherblandino0@gmail.com</span>
+    </div>
+    <div class="taskbar-right">
+      <a href="#about" class="taskbar-link">About</a>
+      <a href="#projects" class="taskbar-link">Projects</a>
+      <a href="#skills" class="taskbar-link">Skills</a>
+      <a href="#contact" class="taskbar-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header with Parallax -->
+  <header class="rellax" data-rellax-speed="-2">
+    <div class="container">
+      <h1 class="animate__animated animate__fadeInDown">Christopher Blandino</h1>
+      <p class="animate__animated animate__fadeInDown animate__delay-1s">Senior in College | Web Developer & Java Programmer</p>
+    </div>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="images/me.png" alt="Christopher Blandino" class="animate__animated animate__fadeInLeft">
         </div>
-    </header>
+        <div class="about-text">
+          <p>Hi! I'm Christopher Blandino, a Computer Science student at the University at Albany, set to graduate in
+            May 2025. With a deep interest in web development and software engineering, I have experience in various
+            languages, including Java, Python, and C++. Throughout my academic journey, I've collaborated on numerous
+            projects, gaining hands-on experience in full-stack development, debugging, and system design.</p>
+          
+          <ul>
+            <li><strong>Education:</strong> Bachelor of Science in Computer Science</li>
+            <li><strong>University:</strong> University at Albany</li>
+            <li><strong>Expected Graduation:</strong> May 2025</li>
+            <li><strong>Skills:</strong> Java, Python, C++, Web Development</li>
+          </ul>
 
-    <section id="about" data-aos="fade-up">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-grid">
-                <div class="about-image">
-                    <!-- Placeholder for my image -->
-                    <img src="images/me.png" alt="Christopher Blandino">
-                </div>
-                <div class="about-text">
-                    <p>Hi! I'm Christopher Blandino, a Computer Science student at the University at Albany, set to graduate in May 2025. With a deep interest in web development and software engineering, I have experience in various languages, including Java, Python, and C++. Throughout my academic journey, I’ve collaborated on numerous projects, gaining hands-on experience in full-stack development, debugging, and system design.</p>
-                    <ul>
-                        <li><strong>Education:</strong> Bachelor of Science in Computer Science</li>
-                        <li><strong>University:</strong> University at Albany</li>
-                        <li><strong>Expected Graduation:</strong> May 2025</li>
-                        <li><strong>Skills:</strong> Java, Python, C++, Web Development</li>
-                    </ul>
-                </div>
+          <!-- Interactive Terminal -->
+          <div class="code-terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">bash</div>
             </div>
+            <div class="terminal-body" id="terminal"></div>
+          </div>
         </div>
-    </section>
-    
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" data-aos="fade-up">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
+  <!-- Projects Section -->
+  <section id="projects" data-aos="fade-up">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="project-carousel">
+        <!-- Project items will be added by JavaScript -->
+      </div>
+      <div class="project-dots"></div>
+    </div>
+  </section>
 
-                <!-- Website Project 1-->
-                <div class="project-card">
-                    <h3>Python-P5</h3>
-                    <p>A Java project showcasing a virtual processor with robust memory management and a file tokenization module.</p>
-                    <a href="https://cblandino.github.io/Python-P5/" class="btn btn-secondary" target="_blank">Live Demo</a>
-                    <a href="https://github.com/cblandino/Python-P5" class="btn btn-tertiary" target="_blank">GitHub</a>
-                </div>
-
-                 <!-- Website Project 2-->
-                <div class="project-card">
-                    <h3>ALPHA (WIP)</h3>
-                    <p>A Java project implementing a virtual processor with modularity and reliability in digital systems.</p>
-                    <a href="https://cblandino.github.io/ALPHA" class="btn btn-secondary" target="_blank">Live Demo</a>
-                    <a href="https://github.com/cblandino/ALPHA(revamped)" class="btn btn-tertiary" target="_blank">GitHub</a>
-                </div>
-                
-                <!-- Website Project 3-->
-                <div class="project-card">
-                    <h3>Text-Based Compiler</h3>
-                    <p>A Java-based text compiler demonstrating basic principles of software development and syntax processing.</p>
-                    <a href="https://github.com/cblandino/Scheme" class="btn btn-tertiary" target="_blank">GitHub</a>
-                </div>
-
-                <!-- Website Project 4-->
-                <div class="project-card">
-                    <h3>Virtual Operating System</h3>
-                    <p>A web-based ToDo list application with multi-threaded support for advanced task management.</p>
-                    <a href="https://github.com/cblandino/Virtual-MultiThreaded-OperatingSystem" class="btn btn-tertiary" target="_blank">GitHub</a>
-                </div>
-                
-                <!-- Website Project 5 -->
-                <div class="project-card">
-                    <h3>Website Project 5: Virtual Processor</h3>
-                    <p>A weather forecasting application that utilizes a public API to retrieve real-time weather data and display it to users based on their location.</p>
-                    <a href="https://github.com/cblandino/VirtualProcessor" class="btn btn-tertiary" target="_blank">GitHub</a>
-                </div>
-
-                <!-- Website Project 5 -->
-                <div class="project-card">
-                    <!--<img src="images/website5-screenshot.jpg" alt="Website 5 Screenshot">-->
-                    <h3>Website Project 6: DamienSweetJar</h3>
-                    <p>A weather forecasting application that utilizes a public API to retrieve real-time weather data and display it to users based on their location.</p>
-                    <!---<a href="https://cblandino.github.io/Weather-App/" class="btn btn-secondary" target="_blank">Live Demo</a>-->
-                    <a href="https://github.com/cblandino/ASP---DamienSweetJar" class="btn btn-tertiary" target="_blank">GitHub</a>
-                </div>
-            </div>
+  <!-- Skills Section -->
+  <section id="skills" data-aos="fade-up">
+    <div class="container">
+      <h2>Proficiencies</h2>
+      <p>Here are the key areas where I excel, showcasing my technical expertise and tools I use.</p>
+      
+      <!-- 3D Skill Cloud -->
+      <div id="skill-cloud"></div>
+      
+      <div class="skills-icons">
+        <div class="skill-item">
+          <i class="fas fa-code"></i>
+          <h3>Programming</h3>
+          <p>HTML, CSS, JavaScript, Java, Python, C++</p>
         </div>
-    </section>
-    
-
-    <!-- Skills Section -->
-    <section id="skills" data-aos="fade-up">
-        <div class="container">
-            <h2>Proficiencies</h2>
-            <p>Here are the key areas where I excel, showcasing my technical expertise and tools I use.</p>
-            <div class="skills-icons">
-                <div class="skill-item">
-                    <i class="fas fa-code"></i>
-                    <h3>Programming</h3>
-                    <p>HTML, CSS, JavaScript, Java, Python, C++</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <h3>Databases</h3>
-                    <p>MongoDB, PostgreSQL, MySQL</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-tools"></i>
-                    <h3>Tools & Frameworks</h3>
-                    <p>React.js, Node.js, ASP.NET, AWS</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-bug"></i>
-                    <h3>Debugging</h3>
-                    <p>JUnit, Selenium, Jest</p>
-                </div>
-            </div>
+        <div class="skill-item">
+          <i class="fas fa-database"></i>
+          <h3>Databases</h3>
+          <p>MongoDB, PostgreSQL, MySQL</p>
         </div>
-    </section>
-    
-    
-
-    <!-- Testimonials Section -->
-    <!--<section id="testimonials" data-aos="fade-up">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <p>Here you can include feedback from classmates, professors, or team members you’ve worked with on projects.</p>
+        <div class="skill-item">
+          <i class="fas fa-tools"></i>
+          <h3>Tools & Frameworks</h3>
+          <p>React.js, Node.js, ASP.NET, AWS</p>
         </div>
-    </section>-->
-
-    <!-- Contact Section -->
-    <section id="contact" data-aos="fade-up">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out! Whether you have a question, want to collaborate on a project, or just want to connect, I'd love to hear from you.</p>
-            <p>You can contact me through any of the methods below:</p>
-            <div class="contact-options">
-                <a href="mailto:ChristopherBlandino0@gmail.com" class="contact-link">
-                    <img src="images/email.png" alt="Email" class="contact-image"> Email
-                </a>
-                <a href="https://www.linkedin.com/in/christopher-blandino-b48594307" target="_blank" class="contact-link">
-                    <img src="images/LinkedIn.png" alt="LinkedIn" class="contact-image"> LinkedIn
-                </a>
-                <a href="https://github.com/cblandino" target="_blank" class="contact-link">
-                    <img src="images/Git.png" alt="GitHub" class="contact-image"> GitHub
-                </a>
-            </div>
+        <div class="skill-item">
+          <i class="fas fa-bug"></i>
+          <h3>Debugging</h3>
+          <p>JUnit, Selenium, Jest</p>
         </div>
-    </section>
-    
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Christopher Blandino. All Rights Reserved.</p>
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out! Whether you have a question, want to collaborate on a project, or just want to connect,
+        I'd love to hear from you.</p>
+      
+      <div class="contact-options">
+        <a href="mailto:ChristopherBlandino0@gmail.com" class="contact-link">
+          <img src="images/email.png" alt="Email" class="contact-image"> Email
+        </a>
+        <a href="https://www.linkedin.com/in/christopher-blandino-b48594307" target="_blank" class="contact-link">
+          <img src="images/LinkedIn.png" alt="LinkedIn" class="contact-image"> LinkedIn
+        </a>
+        <a href="https://github.com/cblandino" target="_blank" class="contact-link">
+          <img src="images/Git.png" alt="GitHub" class="contact-image"> GitHub
+        </a>
+      </div>
+
+      <!-- Animated Contact Form -->
+      <div class="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" required>
+          <label for="name">Your Name</label>
+          <div class="underline"></div>
         </div>
-    </footer>
+        <div class="form-group">
+          <input type="email" id="email" required>
+          <label for="email">Your Email</label>
+          <div class="underline"></div>
+        </div>
+        <div class="form-group">
+          <textarea id="message" required></textarea>
+          <label for="message">Your Message</label>
+          <div class="underline"></div>
+        </div>
+        <button class="btn btn-primary">Send Message</button>
+      </div>
+    </div>
+  </section>
 
-    <!-- AOS for animations -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Christopher Blandino. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-    <!-- Rellax.js for Parallax Effect -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
-    <script>
-        var rellax = new Rellax('.rellax');
-    </script>
+  <!-- AOS for animations -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-    <!-- Particles.js -->
-    <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 100 },
-                size: { value: 3 },
-                move: { speed: 2 },
-                line_linked: { enable: true },
-                color: "#007BFF"
+  <!-- Rellax.js for Parallax Effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+  <script>
+    var rellax = new Rellax('.rellax');
+  </script>
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- Particles.js -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      particlesJS("particles-js", {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
             }
-        });
-    </script>
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    });
+  </script>
 
-    <script src="js/main.js"></script>
-    <script src="js/dropdown.js"></script>
-    <script src="js/current.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dropdown.js"></script>
+  <script src="js/current.js"></script>
+  
+  <!-- enhancement scripts -->
+  <script src="js/3d-skills.js"></script>
+  <script src="js/project-carousel.js"></script>
+  <script src="js/terminal.js"></script>
+  
+  <!-- Loading animation script -->
+  <script>
+    window.addEventListener('load', function() {
+      const loader = document.querySelector('.page-loader');
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+          loader.remove();
+        }, 500);
+      }, 1500);
+      
+      // Initialize ScrollReveal after page loads
+      ScrollReveal().reveal('.project-card, .skill-item', {
+        delay: 200,
+        distance: '20px',
+        origin: 'bottom',
+        interval: 100
+      });
+    });
+  </script>
 </body>
 </html>
